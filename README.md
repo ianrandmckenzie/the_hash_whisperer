@@ -47,7 +47,7 @@ values
 # => ["Example Comment Title 1"]
 ```
 
-### Yes, it works for the shallower values, too
+### Yes, it works for the shallower paths, too
 ```ruby
 # Ruby Hash
 hash_whisperer = TheHashWhisperer.new(your_hash)
