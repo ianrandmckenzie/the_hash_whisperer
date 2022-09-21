@@ -18,6 +18,7 @@ gem install the_hash_whisperer
 ```
 
 ## Usage
+The Hash Whisperer figures out where it needs to go by itself. Traversing through arrays, nested hashes, and a bunch of other variables without you needing to travel with it. If you want to give it a map (aka explicit instructions where to drill into), great! Otherwise, just tell it what you're looking for by providing a single key.
 
 ### Get all values identified by a specified a key
 ```ruby
