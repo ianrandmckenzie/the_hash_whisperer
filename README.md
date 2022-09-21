@@ -1,5 +1,7 @@
 # The Hash Whisperer
-The n+1 brute force machine for getting what you want. This project was inspired by thecreation of a (now long dead) social media aggregator app and being sick of how tedious it was parsing through enormous, confusing hashes and json responses. This library is probably not very efficient, but if you're a new developer working with APIs, it will save you a lot of grief and help you get your API-related college project finished.
+The n+1 brute force machine for getting what you want from a Hash or JSON. This project was inspired by the creation of a (now long dead) social media aggregator app and being sick of how tedious it was parsing through enormous, confusing hashes and json responses.
+
+This library is probably not very efficient, but if you're a new developer working with APIs, it will save you a lot of grief and help you get your API-related college project finished.
 
 ## Installation
 
