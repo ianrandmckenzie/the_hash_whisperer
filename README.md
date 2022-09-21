@@ -19,22 +19,43 @@ gem install the_hash_whisperer
 
 ### Get all values identified by a specified a key
 ```ruby
-whisperer = TheHashWhisperer.new
-values = whisperer.find_all_values_for('title', JSON.parse(json))
+# Ruby Hash
+hash_whisperer = TheHashWhisperer.new(your_hash)
+values = hash_whisperer.find_all_values_for('title')
+
+# JSON
+json_whisperer = TheHashWhisperer.new(your_valid_json, true)
+values ||= json_whisperer.find_all_values_for('title')
+
+values
 # => ["Example Article Title 1", "Example Article Title 2", "Example Comment Title 1"]
 ```
 
 ### Get all values specified by a direct path to that key
 ```ruby
-whisperer = TheHashWhisperer.new
-values = whisperer.drill_into_and_find('data.article.comments.title', json, true)
+# Ruby Hash
+hash_whisperer = TheHashWhisperer.new(your_hash)
+values = hash_whisperer.drill_into_and_find('data.article.comments.title')
+
+# JSON
+json_whisperer = TheHashWhisperer.new(your_valid_json, true)
+values ||= json_whisperer.drill_into_and_find('data.article.comments.title')
+
+values
 # => ["Example Comment Title 1"]
 ```
 
 ### Yes, it works for the shallower values, too
 ```ruby
-whisperer = TheHashWhisperer.new
-values = whisperer.drill_into_and_find('data.article.title', json, true)
+# Ruby Hash
+hash_whisperer = TheHashWhisperer.new(your_hash)
+values = hash_whisperer.drill_into_and_find('data.article.title')
+
+# JSON
+json_whisperer = TheHashWhisperer.new(your_valid_json, true)
+values ||= json_whisperer.drill_into_and_find('data.article.title')
+
+values
 # => ["Example Article Title 1", "Example Article Title 2"]
 ```
 

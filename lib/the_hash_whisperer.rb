@@ -3,21 +3,24 @@ require 'json'
 
 class TheHashWhisperer
 
-  def initialize; end
+  def initialize(hash, json = false)
+    @hash_input = JSON.parse(hash) if json == true
+    @hash_input = JSON.parse(hash.to_json) if hash.is_a?(Hash)
+    @hash_input = JSON.parse(hash.to_json) if hash.is_a?(Array) && hash.flatten.first.is_a?(Hash)
+    return unless @hash_input && @hash_input.is_a?(Hash)
+  end
 
-  def drill_into_and_find(key, input, json = false)
-    hash = JSON.parse(input) if json == true
-    hash = input if input.is_a?(Hash)
-    return unless hash && hash.is_a?(Hash)
+  def drill_into_and_find(key)
     keys = key.split('.')
     target = keys.last
-    dig_values_for(keys, hash, target)
+    dig_values_for(keys, @hash_input, target)
   end
   
   # This method is pulled from:
   # https://www.cookieshq.co.uk/posts/find-values-key-nested-hash-ruby
   # Thank you for inspiring this gem, Zac Moody!
-  def find_all_values_for(key, hash)
+  def find_all_values_for(key)
+    hash = @hash_input
     result = []
     result << hash[key] unless hash.is_a? Array
     hash.each do |hash_value|

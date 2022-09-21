@@ -1,1 +1,2 @@
-scratch.rb # A convenient place for testing non-permanent code in irb REPL
+# A convenient place for testing non-permanent code in irb REPL
+scratch.rb
