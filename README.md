@@ -37,11 +37,11 @@ values
 ```ruby
 # Ruby Hash
 hash_whisperer = TheHashWhisperer.new(your_hash)
-values = hash_whisperer.drill_into_and_find('data.article.comments.title')
+values = hash_whisperer.drill_into_and_find('data.articles.comments.title')
 
 # JSON
 json_whisperer = TheHashWhisperer.new(your_valid_json, true)
-values ||= json_whisperer.drill_into_and_find('data.article.comments.title')
+values ||= json_whisperer.drill_into_and_find('data.articles.comments.title')
 
 values
 # => ["Example Comment Title 1"]
@@ -51,11 +51,11 @@ values
 ```ruby
 # Ruby Hash
 hash_whisperer = TheHashWhisperer.new(your_hash)
-values = hash_whisperer.drill_into_and_find('data.article.title')
+values = hash_whisperer.drill_into_and_find('data.articles.title')
 
 # JSON
 json_whisperer = TheHashWhisperer.new(your_valid_json, true)
-values ||= json_whisperer.drill_into_and_find('data.article.title')
+values ||= json_whisperer.drill_into_and_find('data.articles.title')
 
 values
 # => ["Example Article Title 1", "Example Article Title 2"]
