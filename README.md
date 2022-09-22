@@ -20,6 +20,8 @@ gem install the_hash_whisperer
 ## Usage
 The Hash Whisperer figures out where it needs to go by itself. Traversing through arrays, nested hashes, and a bunch of other variables without you needing to travel with it. If you want to give it a map (aka explicit instructions where to drill into), great! Otherwise, just tell it what you're looking for by providing a single key.
 
+See [the example data near the bottom of this README](#object-examples) for reference to the objects the code examples are using.
+
 ### Get all values identified by a specified a key
 ```ruby
 # Ruby Hash
@@ -61,6 +63,59 @@ values ||= json_whisperer.drill_into_and_find('data.articles.title')
 values
 # => ["Example Article Title 1", "Example Article Title 2"]
 ```
+
+## Object Examples
+
+### Ruby Hash
+```ruby
+{
+  data: {
+    articles: [
+      {
+        title: 'Example Article Title 1',
+        body: 'This is a stub.',
+        comments: [
+          {
+            title: 'Example Article Comment Title 1',
+            body: 'Why are all your articles just stubs?'
+          }
+        ]
+      },
+      {
+        title: 'Example Article Title 2',
+        body: 'This is a stub.',
+        comments: []
+      }
+    ]
+  }
+}
+```
+
+### JSON
+```json
+{
+  "data": {
+    "articles": [
+      {
+        "title": "Example Article Title 1",
+        "body": "This is a stub.",
+        "comments": [
+          {
+            "title": "Example Article Comment Title 1",
+            "body": "Why are all your articles just stubs?"
+          }
+        ]
+      },
+      {
+        "title": "Example Article Title 2",
+        "body": "This is a stub.",
+        "comments": []
+      }
+    ]
+  }
+}
+```
+
 
 ## History
 
