@@ -1,7 +1,13 @@
 # The Hash Whisperer
-The n+1 brute force machine for getting what you want from a Hash or JSON. This project was inspired by the creation of a (now long dead) social media aggregator app and being sick of how tedious it was parsing through enormous, confusing hashes and json responses.
+The Hash Whisperer figures out where it needs to go by itself. Traversing through arrays, nested hashes, and a bunch of other variables without you needing to travel with it. If you want to give it a map (aka explicit instructions where to drill into), great! Otherwise, just tell it what you're looking for by providing a single key.
 
-This library is probably not very efficient, but if you're a new developer working with APIs, it will save you a lot of grief and help you get your API-related college project finished.
+## Navigate this README
+* [#installation](Installation)
+* [#usage](Usage)
+* [#object-examples](Object Examples)
+* [#history](History)
+* [#contributing](Contributing)
+* [#alternate-gems](Alternate Gems)
 
 ## Installation
 
@@ -18,7 +24,6 @@ gem install the_hash_whisperer
 ```
 
 ## Usage
-The Hash Whisperer figures out where it needs to go by itself. Traversing through arrays, nested hashes, and a bunch of other variables without you needing to travel with it. If you want to give it a map (aka explicit instructions where to drill into), great! Otherwise, just tell it what you're looking for by providing a single key.
 
 See [the example data near the bottom of this README](#object-examples) for reference to the objects the code examples are using.
 
@@ -141,7 +146,7 @@ bundle exec rake test
 
 For security issues, send an email to the address on [this page](https://github.com/ianrandmckenzie).
 
-## Alternative Gem
+## Alternative Gems
 
 ### [hashie](https://github.com/hashie/hashie)
 Hashie is a robust library for managing hashes, including features offered by `the_hash_whisperer` called Deep Fetch:
