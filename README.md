@@ -7,7 +7,7 @@ The Hash Whisperer figures out where it needs to go by itself. Traversing throug
 * [Object Examples](#object-examples)
 * [History](#history)
 * [Contributing](#contributing)
-* [Alternate Gems](#alternate-gems)
+* [Alternative Gems](#alternative-gems)
 
 ## Installation
 
