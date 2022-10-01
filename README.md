@@ -2,12 +2,12 @@
 The Hash Whisperer figures out where it needs to go by itself. Traversing through arrays, nested hashes, and a bunch of other variables without you needing to travel with it. If you want to give it a map (aka explicit instructions where to drill into), great! Otherwise, just tell it what you're looking for by providing a single key.
 
 ## Navigate this README
-* [#installation](Installation)
-* [#usage](Usage)
-* [#object-examples](Object Examples)
-* [#history](History)
-* [#contributing](Contributing)
-* [#alternate-gems](Alternate Gems)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Object Examples](#object-examples)
+* [History](#history)
+* [Contributing](#contributing)
+* [Alternate Gems](#alternate-gems)
 
 ## Installation
 
