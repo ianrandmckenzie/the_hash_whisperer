@@ -140,3 +140,10 @@ bundle exec rake test
 ```
 
 For security issues, send an email to the address on [this page](https://github.com/ianrandmckenzie).
+
+## Alternative Gem
+
+### [hashie](https://github.com/hashie/hashie)
+Hashie is a robust library for managing hashes, including features offered by `the_hash_whisperer` called Deep Fetch:
+[https://github.com/hashie/hashie#deepfetch](https://github.com/hashie/hashie#deepfetch)
+
