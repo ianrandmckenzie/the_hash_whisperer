@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "the_hash_whisperer"
-  s.version     = "0.0.0"
+  s.version     = "0.0.1"
   s.summary     = "The Hash Whisperer"
   s.description = "Tame that wild hash to get the values you're looking for — 
                   without making your eyes bleed staring at a jumbled console!"
