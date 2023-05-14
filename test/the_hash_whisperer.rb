@@ -28,6 +28,13 @@ class TheHashWhispererTest < Minitest::Test
     values = whisperer.drill_into_and_find('data.archives.data.generic_data.server.updated_at')
     assert_equal(values.first, "2022-06-19T22:49:06.416Z")
   end
+
+  def test_deep_surgical_grabbing_with_txt
+    json = get_file_as_string(File.join(File.dirname(__FILE__), './fixtures/json_string.txt'))
+    whisperer = TheHashWhisperer.new(json, true)
+    values = whisperer.drill_into_and_find('data.archives.data.generic_data.server.updated_at')
+    assert_equal(values.first, "2022-06-19T22:49:06.416Z")
+  end
   
   def get_file_as_string(filename)
     data = ''
