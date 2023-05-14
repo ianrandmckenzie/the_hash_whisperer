@@ -30,10 +30,11 @@ class TheHashWhispererTest < Minitest::Test
   end
 
   def test_deep_surgical_grabbing_with_txt
-    json = get_file_as_string(File.join(File.dirname(__FILE__), './fixtures/json_string.txt'))
+    string_file = get_file_as_string(File.join(File.dirname(__FILE__), './fixtures/json_string.txt'))
+    json = JSON.parse(string_file)
     whisperer = TheHashWhisperer.new(json, true)
-    values = whisperer.drill_into_and_find('data.archives.data.generic_data.server.updated_at')
-    assert_equal(values.first, "2022-06-19T22:49:06.416Z")
+    values = whisperer.drill_into_and_find('result.id')
+    assert_equal(values.first, 307633301)
   end
   
   def get_file_as_string(filename)

@@ -144,9 +144,6 @@ bundle install
 bundle exec rake test
 ```
 
-## Testing
-
-
 For security issues, send an email to the address on [this page](https://github.com/ianrandmckenzie).
 
 ## Alternative Gems

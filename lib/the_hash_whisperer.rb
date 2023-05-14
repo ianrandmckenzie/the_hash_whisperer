@@ -39,7 +39,8 @@ class TheHashWhisperer
     if (hash.is_a?(Array))
       result << dig_array(keys, hash, target)
     else
-      result << hash[target] if (keys.find_index(keys.first) == keys.find_index(keys.last))
+      result << hash[target] if (keys.find_index(keys.first) == keys.find_index(keys.last)) && (hash.is_a?(Hash))
+      result << hash if !(hash.is_a?(Hash))
     end
 
     return result.compact.flatten unless keys&.first && hash&.is_a?(Hash) && hash[keys.first]
@@ -59,6 +60,7 @@ class TheHashWhisperer
 
   def dig_array(keys, hash, target)
     return unless hash.is_a?(Array)
+    return unless hash.count > 0
     result = []
     keys.shift
     hash.each do |value|
